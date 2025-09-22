@@ -4,7 +4,7 @@ document.body.appendChild(getSumBtn);
 
 const getSum = () => {
   // Select all price elements by class
-  let prices = document.querySelectorAll(".prices");
+  let prices = document.querySelectorAll(".price"); // ✅ fixed
   let total = 0;
 
   // Calculate total
@@ -12,8 +12,10 @@ const getSum = () => {
     total += parseInt(el.textContent, 10);
   });
 
-  // Create new row for total
+  // Get the table
   let table = document.querySelector("table");
+
+  // Create new row for total
   let totalRow = document.createElement("tr");
   let totalCell = document.createElement("td");
 
